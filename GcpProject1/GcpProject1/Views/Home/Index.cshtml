@@ -1,13 +1,25 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
-
-<div class="jumbotron" style="text-align:center">
-    <h1>Honors 392 - Politics of the Cold War</h1>
-    <h2>Final Project</h2>
-    <h3>Technologies from the Cold War</h3>
-</div>
+﻿@{ ViewBag.Title = "Home Page"; }
 
 <div class="row">
+    <div style="text-align:center">
+        <h1>Technologies from the Cold War</h1>
+        <h3>Honors 392 - Politics of the Cold War</h3>
+        <h3>Final Project</h3>
+        <h3>By Baylee Carpenter and Regan Sink</h3>
+    </div>
+    <hr />
+    <p>The Cold War lasted over 40 years and had lasting effects on the world around us.</p>
 
+    <p>This project highlights some of the good that came out of a dark part of history by showcasing useful technologies that exist today because of the Cold War.</p>
+
+    <ul>
+        <li>@Html.ActionLink("Space Exploration", "SpaceRace", "Home")</li>
+        <li>@Html.ActionLink("Nuclear Power", "NuclearPower", "Home")</li>
+        <li>@Html.ActionLink("Internet", "Internet", "Home")</li>
+        <li>@Html.ActionLink("Cameras", "Cameras", "Home")</li>
+    </ul>
+
+    <p>To find out how this website was created, visit the @Html.ActionLink("About", "About", "Home") page.</p>
+
+    <hr />
 </div>

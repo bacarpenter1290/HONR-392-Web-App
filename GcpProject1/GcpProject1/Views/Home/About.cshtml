@@ -1,7 +1,47 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<h2>@ViewBag.Title</h2>
+<h2>Technologies of the Cold War</h2>
 
-<p>Use this area to provide additional information.</p>
+<p>This website was created as the final project in HONR 392 - Politics of the Cold War. It was made during the Fall 2020 semester by Baylee Carpenter and Regan Sink.</p>
+
+<hr />
+
+<h2>How this website was created</h2>
+
+<p>A website requires three things: the code to run the site, a server to host the site, and a domain name. This section descibes how this project tackled these.</p>
+
+<h3>Code</h3>
+
+<p>This website was written in C# using ASP.NET, a website framework developed by Microsoft. We chose this framework and language as we've both worked with C# before and Baylee has used ASP.NET extensively during his most recent internship.</p>
+
+<p>Additionally, all of the webpages are written in cshtml, which is a special server side version of HTML that can be used to create interactive web pages. An example of the code for the home page is shown below. The sections that begin with an "@@" symbol are actually C# scripts inserted into the HTML. When a user requests this web page, the server will automatically run the C# and put the output into the HTML. The C# scripts shown below are actually what creates the links on the home page.</p>
+
+<div style="text-align:center;">
+    <img src="~/Content/Images/IndexScreenshot.png" style="max-height:700px; max-width:1100px;"/>
+</div>
+
+<h3>Server</h3>
+
+<p>Once the code is complete, a server is required to actually run the code so that a user can view it. Since we don't have easy access to a web server, we took advantage of the free student credit that Google Cloud provides and hosted the website using Google Cloud.</p>
+
+<p>This was accomplished by running a virtual machine on the Google Cloud. This virtual machine holds all of the complied code that we wrote and when a user requests one of the pages, it runs the code and sends the web page to the user.</p>
+
+<p>The Google Cloud Console is shown below. This shows the virtual machine that is currently running this site (aspnet-1), where it is hosted (or what cloud server farm it is virtualized in), and the external/internal IP addresses of the machine.</p>
+
+<div style="text-align:center;">
+    <img src="~/Content/Images/GoogleCloudConsole.png" style="max-height:500px; max-width:1100px;" />
+</div>
+
+<h3>Domain Name</h3>
+
+<p>After the code is running on a server, people need to be able to access the site. They could type in the external IP address of the server into their web browser to view it, but the average user will not do that. In order for someone to easily access the site, a domain name must be bought. This domain name will be the URL that people will use to access the site (like facebook.com or google.com).</p>
+
+<p>Purchasing a domain name has been made rather simple. Go to a site like <a href="https://www.namecheap.com/">namecheap.com</a> and type in the domain name that you want. As long as the domain name isn't already in use (like facebook.com), then you can purchase it. For this project, we purchased "honors392coldwartech.xyz" as our domain name (we bought .xyz instead of .com as it was much cheaper).</p>
+
+<p>After the domain name was purchased, we had to bind the server that is running our website to the domain name. This is done using DNS (Domain Name System) settings. This makes it so when you type in www.honors392coldwartech.xyz, the browser is actually being redirected to the IP address of the server and the website is presented to you. The current DNS settings for this website are shown below.</p>
+
+<div style="text-align:center;">
+    <img src="~/Content/Images/DNS.png" style="max-height:500px; max-width:1100px;" />
+</div>

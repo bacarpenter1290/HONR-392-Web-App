@@ -34,5 +34,23 @@ namespace GcpProject1.Controllers
             ViewBag.Message = "Space Race";
             return View();
         }
+
+        public ActionResult NuclearPower()
+        {
+            ViewBag.Message = "Nuclear Power";
+            return View();
+        }
+
+        public ActionResult Cameras()
+        {
+            ViewBag.Message = "Cameras";
+            return View();
+        }
+
+        public ActionResult Internet()
+        {
+            ViewBag.Message = "Internet";
+            return View();
+        }
     }
 }
